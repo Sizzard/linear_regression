@@ -49,14 +49,18 @@ def real_polyfit(df0, df1):
 
 def algorithm():
     df0, df1 = getDataSet('data.csv')
-    # real_polyfit(df0, df1)
-    # tmp_th0, tmp_th1 = getThetas()
-    # learning_rate = 0.1
-    # tmp_th0 = compute_theta0(df0, df1, tmp_th0, tmp_th1, learning_rate)
-    # tmp_th1 = compute_theta1(df0, df1, tmp_th0, tmp_th1, learning_rate)
-    # print(tmp_th0)
-    # print(tmp_th1)
-    # show_plot(df0, df1, tmp_th0, tmp_th1)
+    real_polyfit(df0, df1)
+    tmp_th0, tmp_th1 = getThetas()
+    learning_rate = 0.1
+    tmp_th0 = compute_theta0(df0, df1, tmp_th0, tmp_th1, learning_rate)
+    tmp_th1 = compute_theta1(df0, df1, tmp_th0, tmp_th1, learning_rate)
+    print(tmp_th0)
+    print(tmp_th1)
+    guessed = tmp_th0 + tmp_th1 * 200000
+    print(guessed)
+
+
+    show_plot(df0, df1, tmp_th0, tmp_th1)
 
 
 def main():

@@ -7,7 +7,7 @@ def getThetas():
         return thet0, thet1
 
 def estimate(mileage: int, thet0: float, thet1: float) -> int:
-    result = thet0 + (thet1 + mileage)
+    result = thet0 + (thet1 * mileage)
     return result
 
 def main():
