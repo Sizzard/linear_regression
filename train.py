@@ -34,9 +34,6 @@ def algorithm(km, price):
 
         t0 = tmp0 - (learning_rate * d0)
         t1 = tmp1 - (learning_rate * d1)
-        if _ % 500 == 0 or _ == 1 or _ == 0:
-            print(t0, t1)
-            print(f"sum0 : {sum0}, sum1 : {sum1}")
 
     for mileage in km_norm:
         estimated.append(estimate(mileage, t0, t1))
