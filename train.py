@@ -4,8 +4,8 @@ from predict import estimate, getData
 
 def show_plot(km, price, estimated):
     plt.scatter(km, price)
-    plt.xlabel("Experience")
-    plt.ylabel("Salary")
+    plt.xlabel("Mileage")
+    plt.ylabel("Price")
     plt.plot(km, estimated, color="red")
     plt.show()
 
